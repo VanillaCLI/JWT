@@ -1,11 +1,13 @@
 import { MongoClient } from "mongodb";
 
-export async function getClient(req, res) {
+export async function getClient() {
 	let client;
 	try {
 		client = await MongoClient.connect(process.env.CONNECTION_STRING);
+		console.log(client);
 	} catch (err) {
-		res.status(500).json({ message: "Failed to connect!" });
+		console.log(err);
+		return null;
 	}
 
 	return client;
