@@ -1,5 +1,6 @@
 {
 	"name": "jwt",
+	"type": "module",
 	"version": "1.0.0",
 	"description": "Authentication with JWT",
 	"scripts": {
